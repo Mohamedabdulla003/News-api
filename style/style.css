@@ -1,0 +1,162 @@
+:root {
+    --dark-blue: #012d6a;
+    --blue: #0066cc;
+    --purple: #ab3192;
+  }
+  
+  /* SCROLL BARR STYLE */
+  /* width */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--purple);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Newsreader", serif;
+    font-weight: 800;
+  }
+  
+  body {
+    overflow: hidden;
+    font-family: "Quicksand", sans-serif;
+  }
+  
+  nav {
+    width: 100%;
+    height: 80px;
+    box-shadow: 1px 1px 5px gray;
+  }
+  
+  h1 {
+    font-size: 48px;
+  }
+  ul {
+    padding-left: 0;
+  }
+  
+  .container {
+    position: relative;
+    margin: 12px 0;
+  }
+  .text-justify {
+    text-align: justify;
+  }
+  
+  .color-blue {
+    color: var(--blue);
+  }
+  
+  .color-purple {
+    color: var(--purple);
+  }
+  
+  .color-dark-blue {
+    color: var(--dark-blue);
+  }
+  
+  .search-btn {
+    border: 1px solid #dee2e6;
+    border-radius: 0 8px 8px 0;
+  }
+  .search-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+  .form-control {
+    border-radius: 8px 0 0 8px;
+    border-right: none;
+  }
+  .form-control:focus,
+  .form-select:focus {
+    border-color: var(--purple);
+    box-shadow: none;
+  }
+  
+  .nav-container {
+    height: 100%;
+    width: 100%;
+    padding: 8px 32px;
+  }
+  .top-headlines-part {
+    height: calc(100% - 80px);
+    overflow-y: auto;
+    position: fixed;
+    left: 0;
+    width: 320px;
+  }
+  
+  .headline-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .headline-description {
+    font-size: 14px;
+  }
+  
+  .everything-news-part {
+    height: calc(100% - 80px);
+    overflow-y: auto;
+    position: fixed;
+    width: calc(100% - 320px);
+    left: 320px;
+  }
+  .alert {
+    display: none;
+    top: 20px;
+    left: 200px;
+  }
+  
+  .close-btn svg {
+    width: 25px;
+    height: 25px;
+  }
+  
+  @media screen and (max-width: 750px) {
+    body {
+      overflow: visible;
+    }
+    .container {
+      margin: 12px auto;
+    }
+    .everything-news-part,
+    .top-headlines-part {
+      position: unset;
+      height: auto;
+      width: 100%;
+    }
+  
+    .top-headlines-part {
+      border-right: none !important;
+    }
+    .list-group-item {
+      display: grid !important;
+    }
+    .news-content {
+      width: 100% !important;
+      padding-right: 0 !important;
+    }
+    .img-fluid {
+      width: 100% !important;
+    }
+  }
